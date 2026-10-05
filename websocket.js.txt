@@ -1,0 +1,10 @@
+// ==================================================
+//  NGUYỄN NGỌC VĂN — Chủ Hệ Thống
+// ==================================================
+const getluong = require('./get.js');
+const admin    = require('./admin.js');
+
+module.exports = {
+    message: getluong,
+    admin: admin
+};

@@ -1,0 +1,11 @@
+// ==================================================
+//  NGUYỄN NGỌC VĂN — Chủ Hệ Thống
+// ==================================================
+const mysqli = require('./mysqli');
+const time = require('./string');
+
+module.exports = function(id, thaydoi, noidung, nguon='') {
+    mysqli.query("UPDATE `nguoichoi` SET `xu` = `xu` + ? WHERE `id` = ?", [thaydoi, id]);
+    mysqli.query("INSERT INTO `sodu` SET `uid` = ?, `sotien` = ?, `noidung` = ?, `nguon` = ?, `thoigian` = ?",
+        [id, thaydoi, noidung, nguon, time.time().thoigian]);
+};

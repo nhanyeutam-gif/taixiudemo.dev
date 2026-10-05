@@ -1,0 +1,11 @@
+// ==================================================
+//  NGUYỄN NGỌC VĂN — Chủ Hệ Thống
+// ==================================================
+module.exports = function(u) {
+    let r = '000000';
+    if(u.admin == 4) r = 'ffd700';
+    else if(u.admin == 3) r = 'ff9800';
+    else if(u.admin == 2) r = 'ff0000';
+    else if(u.admin == 1) r = '00ff00';
+    return { ...u, mau: r };
+};
